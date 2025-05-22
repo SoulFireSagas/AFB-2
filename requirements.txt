@@ -69,3 +69,11 @@ git+https://github.com/Joelkb/cinemagoer
 apscheduler
 opencv-python-headless==4.8.1.78
 telegraph==2.2.0
+
+# web application
+Flask==1.1.2
+gunicorn==20.1.0
+Jinja2==3.0.3
+werkzeug==2.0.2
+itsdangerous==2.0.1
+
