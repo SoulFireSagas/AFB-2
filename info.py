@@ -46,7 +46,7 @@ MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1002641880009')
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002665323490'))  # Premium logs channel id
 auth_channel = environ.get('AUTH_CHANNEL', '-1002299246754')  # Channel/Group ID for force sub (make sure bot is admin)
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002660427884').split()]
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002544727048')  # Support group id (make sure bot is admin)
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002289580324')  # Support group id (make sure bot is admin)
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002631813581')  # Request channel id (make sure bot is admin)
 AUTH_CHANNEL = [int(fch) if id_pattern.search(fch) else fch for fch in environ.get('AUTH_CHANNEL', '-1002299246754').split()]
 MULTI_FSUB = [int(channel_id) for channel_id in environ.get('MULTI_FSUB', '-1002299246754').split() if re.match(r'^-?\d+$', channel_id)]  # Channel for force sub (make sure bot is admin)
@@ -99,7 +99,7 @@ IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 # ============================
 # Channel & Group Links Configuration
 # ============================
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+8u-Xz04Jr6Q1OTJl')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/SS_Movies_Series')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/SSadminRobot')
 MOVIE_UPDATE_CHANNEL_LNK = environ.get('MOVIE_UPDATE_CHANNEL_LNK', 'https://t.me/+0dMvhpBQnqpkNTU1')
