@@ -37,10 +37,10 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('• ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ᴄʜᴀᴛ •', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('• ᴍᴀsᴛᴇʀ •', url="https://t.me/cosmic_freak"),
-                    InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', url='https://t.me/codeflixsupport')
+                    InlineKeyboardButton('• ᴍᴀsᴛᴇʀ •', url="https://t.me/SSadminRobot"),
+                    InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', url='https://t.me/SSbotz_Support')
                 ],[
-                    InlineKeyboardButton('• ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ •', url="https://t.me/codeflix_bots")
+                    InlineKeyboardButton('• ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ •', url="https://t.me/SS_botz")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.GSTART_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -55,16 +55,10 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton(text="🏡", callback_data="start"),
-                    InlineKeyboardButton(text="🛡", callback_data="group_info"),
-                    InlineKeyboardButton(text="💳", callback_data="about"),
-                    InlineKeyboardButton(text="💸", callback_data="shortlink_info"),
-                    InlineKeyboardButton(text="🖥", callback_data="main"),
-                ],[
                     InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('• ᴄᴏᴍᴍᴀɴᴅꜱ •', callback_data='main'),
-                    InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data='shortlink_info')
+                    InlineKeyboardButton('• 𝖬𝖠𝖨𝖭 •', url="https://t.me/SS_Movies_Series"),
+                    InlineKeyboardButton('• 𝖦𝖱𝖮𝖴𝖯 •', url="https://t.me/+8u-Xz04Jr6Q1OTJl")
                 ],[
                     InlineKeyboardButton('• ᴘʀᴇᴍɪᴜᴍ •', callback_data='premium_info'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
@@ -121,16 +115,10 @@ async def start(client, message):
        
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton(text="🏡", callback_data="start"),
-                    InlineKeyboardButton(text="🛡", callback_data="group_info"),
-                    InlineKeyboardButton(text="💳", callback_data="about"),
-                    InlineKeyboardButton(text="💸", callback_data="shortlink_info"),
-                    InlineKeyboardButton(text="🖥", callback_data="main"),
-                ],[
                     InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('• ᴄᴏᴍᴍᴀɴᴅꜱ •', callback_data='main'),
-                    InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data='shortlink_info')
+                    InlineKeyboardButton('• 𝖬𝖠𝖨𝖭 •', url="https://t.me/SS_Movies_Series"),
+                    InlineKeyboardButton('• 𝖦𝖱𝖮𝖴𝖯 •', url="https://t.me/+8u-Xz04Jr6Q1OTJl")
                 ],[
                     InlineKeyboardButton('• ᴘʀᴇᴍɪᴜᴍ •', callback_data='premium_info'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
@@ -804,191 +792,6 @@ async def delete_all_index_confirm(bot, message):
     await message.message.edit('ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ᴀʟʟ ɪɴᴅᴇxᴇᴅ ꜰɪʟᴇꜱ ✅')
 
 
-@Client.on_message(filters.command('settings'))
-async def settings(client, message):
-    userid = message.from_user.id if message.from_user else None
-    if not userid:
-        return await message.reply(f"ʏᴏᴜ'ʀᴇ ᴀɴᴏɴʏᴍᴏᴜꜱ ᴀᴅᴍɪɴ.\nᴜꜱᴇ /connect {message.chat.id} ɪɴ ᴘᴍ.")
-    chat_type = message.chat.type
-
-    if chat_type == enums.ChatType.PRIVATE:
-        grpid = await active_connection(str(userid))
-        if grpid is not None:
-            grp_id = grpid
-            try:
-                chat = await client.get_chat(grpid)
-                title = chat.title
-            except:
-                await message.reply_text("ᴍᴀᴋᴇ ꜱᴜʀᴇ ɪ'ᴍ ᴘʀᴇꜱᴇɴᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ !!", quote=True)
-                return
-        else:
-            await message.reply_text("ɪ'ᴍ ɴᴏᴛ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ᴀɴʏ ɢʀᴏᴜᴘ !", quote=True)
-            return
-
-    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        grp_id = message.chat.id
-        title = message.chat.title
-
-    else:
-        return
-
-    st = await client.get_chat_member(grp_id, userid)
-    if (
-            st.status != enums.ChatMemberStatus.ADMINISTRATOR
-            and st.status != enums.ChatMemberStatus.OWNER
-            and str(userid) not in ADMINS
-    ):
-        return
-    
-    settings = await get_settings(grp_id)
-
-    try:
-        if settings['max_btn']:
-            settings = await get_settings(grp_id)
-    except KeyError:
-        await save_group_settings(grp_id, 'max_btn', False)
-        settings = await get_settings(grp_id)
-    if 'is_shortlink' not in settings.keys():
-        await save_group_settings(grp_id, 'is_shortlink', False)
-    else:
-        pass
-
-    if settings is not None:
-        buttons = [        
-                [
-                InlineKeyboardButton(
-                    'ʀᴇꜱᴜʟᴛ ᴘᴀɢᴇ',
-                    callback_data=f'setgs#button#{settings["button"]}#{grp_id}',
-                ),
-                InlineKeyboardButton(
-                    'ʙᴜᴛᴛᴏɴ' if settings["button"] else 'ᴛᴇxᴛ',
-                    callback_data=f'setgs#button#{settings["button"]}#{grp_id}',
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    'ꜰɪʟᴇ ꜱᴇɴᴅ ᴍᴏᴅᴇ',
-                    callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
-                ),
-                InlineKeyboardButton(
-                    'ꜱᴛᴀʀᴛ' if settings["botpm"] else 'ᴀᴜᴛᴏ',
-                    callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    'ꜰɪʟᴇ ꜱᴇᴄᴜʀᴇ',
-                    callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
-                ),
-                InlineKeyboardButton(
-                    'ᴇɴᴀʙʟᴇ' if settings["file_secure"] else 'ᴅɪꜱᴀʙʟᴇ',
-                    callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    'ɪᴍᴅʙ ᴘᴏꜱᴛᴇʀ',
-                    callback_data=f'setgs#imdb#{settings["imdb"]}#{grp_id}',
-                ),
-                InlineKeyboardButton(
-                    'ᴇɴᴀʙʟᴇ' if settings["imdb"] else 'ᴅɪꜱᴀʙʟᴇ',
-                    callback_data=f'setgs#imdb#{settings["imdb"]}#{grp_id}',
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    'ꜱᴘᴇʟʟ ᴄʜᴇᴄᴋ',
-                    callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
-                ),
-                InlineKeyboardButton(
-                    'ᴇɴᴀʙʟᴇ' if settings["spell_check"] else 'ᴅɪꜱᴀʙʟᴇ',
-                    callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    'ᴡᴇʟᴄᴏᴍᴇ ᴍꜱɢ',
-                    callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
-                ),
-                InlineKeyboardButton(
-                    'ᴇɴᴀʙʟᴇ' if settings["welcome"] else 'ᴅɪꜱᴀʙʟᴇ',
-                    callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    'ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ',
-                    callback_data=f'setgs#auto_delete#{settings["auto_delete"]}#{grp_id}',
-                ),
-                InlineKeyboardButton(
-                    'ᴇɴᴀʙʟᴇ' if settings["auto_delete"] else 'ᴅɪꜱᴀʙʟᴇ',
-                    callback_data=f'setgs#auto_delete#{settings["auto_delete"]}#{grp_id}',
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    'ᴀᴜᴛᴏ ꜰɪʟᴛᴇʀ',
-                    callback_data=f'setgs#auto_ffilter#{settings["auto_ffilter"]}#{grp_id}',
-                ),
-                InlineKeyboardButton(
-                    'ᴇɴᴀʙʟᴇ' if settings["auto_ffilter"] else 'ᴅɪꜱᴀʙʟᴇ',
-                    callback_data=f'setgs#auto_ffilter#{settings["auto_ffilter"]}#{grp_id}',
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    'ᴍᴀx ʙᴜᴛᴛᴏɴꜱ',
-                    callback_data=f'setgs#max_btn#{settings["max_btn"]}#{grp_id}',
-                ),
-                InlineKeyboardButton(
-                    '10' if settings["max_btn"] else f'{MAX_B_TN}',
-                    callback_data=f'setgs#max_btn#{settings["max_btn"]}#{grp_id}',
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    'ꜱʜᴏʀᴛʟɪɴᴋ',
-                    callback_data=f'setgs#is_shortlink#{settings["is_shortlink"]}#{grp_id}',
-                ),
-                InlineKeyboardButton(
-                    'ᴇɴᴀʙʟᴇ' if settings["is_shortlink"] else 'ᴅɪꜱᴀʙʟᴇ',
-                    callback_data=f'setgs#is_shortlink#{settings["is_shortlink"]}#{grp_id}',
-                ),
-            ],
-            [
-                InlineKeyboardButton('⇋ ᴄʟᴏꜱᴇ ꜱᴇᴛᴛɪɴɢꜱ ᴍᴇɴᴜ ⇋', 
-                                     callback_data='close_data'
-                                     )
-            ]
-        ]
-        
-
-        btn = [[
-                InlineKeyboardButton("👤 ᴏᴘᴇɴ ɪɴ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ 👤", callback_data=f"opnsetpm#{grp_id}")
-              ],[
-                InlineKeyboardButton("👥 ᴏᴘᴇɴ ʜᴇʀᴇ 👥", callback_data=f"opnsetgrp#{grp_id}")
-              ]]
-
-        reply_markup = InlineKeyboardMarkup(buttons)
-        if chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-            await message.reply_text(
-                text="<b>ᴡʜᴇʀᴇ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴏᴘᴇɴ ꜱᴇᴛᴛɪɴɢꜱ ᴍᴇɴᴜ ? ⚙️</b>",
-                reply_markup=InlineKeyboardMarkup(btn),
-                disable_web_page_preview=True,
-                parse_mode=enums.ParseMode.HTML,
-                reply_to_message_id=message.id
-            )
-        else:
-            await message.reply_text(
-                text=f"<b>ᴄʜᴀɴɢᴇ ʏᴏᴜʀ ꜱᴇᴛᴛɪɴɢꜱ ꜰᴏʀ {title} ᴀꜱ ʏᴏᴜ ᴡɪꜱʜ ⚙</b>",
-                reply_markup=reply_markup,
-                disable_web_page_preview=True,
-                parse_mode=enums.ParseMode.HTML,
-                reply_to_message_id=message.id
-            )
-
-
-
 @Client.on_message(filters.command('set_template'))
 async def save_template(client, message):
     sts = await message.reply("ᴄʜᴇᴄᴋɪɴɢ ᴛᴇᴍᴘʟᴀᴛᴇ...")
@@ -1362,100 +1165,7 @@ async def removetutorial(bot, message):
     reply = await message.reply_text("<b>ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ...</b>")
     await save_group_settings(grpid, 'is_tutorial', False)
     await reply.edit_text(f"<b>ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʀᴇᴍᴏᴠᴇᴅ ᴛᴜᴛᴏʀɪᴀʟ ʟɪɴᴋ ✅</b>")
-    
 
-@Client.on_callback_query(filters.regex("topsearch"))
-async def topsearch_callback(client, callback_query):
-    
-    def is_alphanumeric(string):
-        return bool(re.match('^[a-zA-Z0-9 ]*$', string))
-    
-    limit = 20  
-    top_messages = await mdb.get_top_messages(limit)
-    seen_messages = set()
-    truncated_messages = []
-    for msg in top_messages:
-        msg_lower = msg.lower()
-        if msg_lower not in seen_messages and is_alphanumeric(msg):
-            seen_messages.add(msg_lower)
-            
-            if len(msg) > 35:
-                truncated_messages.append(msg[:32] + "...")
-            else:
-                truncated_messages.append(msg)
-    keyboard = [truncated_messages[i:i+2] for i in range(0, len(truncated_messages), 2)]
-    reply_markup = ReplyKeyboardMarkup(
-        keyboard, 
-        one_time_keyboard=True, 
-        resize_keyboard=True, 
-        placeholder="Most searches of the day"
-    )
-    await callback_query.message.reply_text("<b>Tᴏᴘ Sᴇᴀʀᴄʜᴇs Oғ Tʜᴇ Dᴀʏ 👇</b>", reply_markup=reply_markup)
-    await callback_query.answer()
-
-@Client.on_message(filters.command('top_search'))
-async def top(_, message):
-    def is_alphanumeric(string):
-        return bool(re.match('^[a-zA-Z0-9 ]*$', string))
-    try:
-        limit = int(message.command[1])
-    except (IndexError, ValueError):
-        limit = 20
-    top_messages = await mdb.get_top_messages(limit)
-    seen_messages = set()
-    truncated_messages = []
-    for msg in top_messages:
-        if msg.lower() not in seen_messages and is_alphanumeric(msg):
-            seen_messages.add(msg.lower())
-            
-            if len(msg) > 35:
-                truncated_messages.append(msg[:35 - 3])
-            else:
-                truncated_messages.append(msg)
-    keyboard = []
-    for i in range(0, len(truncated_messages), 2):
-        row = truncated_messages[i:i+2]
-        keyboard.append(row)
-    reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True, resize_keyboard=True, placeholder="Most searches of the day")
-    await message.reply_text(f"<b>Tᴏᴘ Sᴇᴀʀᴄʜᴇs Oғ Tʜᴇ Dᴀʏ 👇</b>", reply_markup=reply_markup)
-
-    
-@Client.on_message(filters.command('trendlist'))
-async def trendlist(client, message):
-    def is_alphanumeric(string):
-        return bool(re.match('^[a-zA-Z0-9 ]*$', string))
-    limit = 31
-    if len(message.command) > 1:
-        try:
-            limit = int(message.command[1])
-        except ValueError:
-            await message.reply_text("Invalid number format.\nPlease provide a valid number after the /trendlist command.")
-            return 
-    try:
-        top_messages = await mdb.get_top_messages(limit)
-    except Exception as e:
-        await message.reply_text(f"Error retrieving messages: {str(e)}")
-        return  
-
-    if not top_messages:
-        await message.reply_text("No top messages found.")
-        return 
-    seen_messages = set()
-    truncated_messages = []
-
-    for msg in top_messages:
-        if msg.lower() not in seen_messages and is_alphanumeric(msg):
-            seen_messages.add(msg.lower())
-            truncated_messages.append(msg[:32] + '...' if len(msg) > 35 else msg)
-
-    if not truncated_messages:
-        await message.reply_text("No valid top messages found.")
-        return  
-    formatted_list = "\n".join([f"{i+1}. <b>{msg}</b>" for i, msg in enumerate(truncated_messages)])
-    additional_message = "⚡️ 𝑨𝒍𝒍 𝒕𝒉𝒆 𝒓𝒆𝒔𝒖𝒍𝒕𝒔 𝒂𝒃𝒐𝒗𝒆 𝒄𝒐𝒎𝒆 𝒇𝒓𝒐𝒎 𝒘𝒉𝒂𝒕 𝒖𝒔𝒆𝒓𝒔 𝒉𝒂𝒗𝒆 𝒔𝒆𝒂𝒓𝒄𝒉𝒆𝒅 𝒇𝒐𝒓. 𝑻𝒉𝒆𝒚'𝒓𝒆 𝒔𝒉𝒐𝒘𝒏 𝒕𝒐 𝒚𝒐𝒖 𝒆𝒙𝒂𝒄𝒕𝒍𝒚 𝒂𝒔 𝒕𝒉𝒆𝒚 𝒘𝒆𝒓𝒆 𝒔𝒆𝒂𝒓𝒄𝒉𝒆𝒅, 𝒘𝒊𝒕𝒉𝒐𝒖𝒕 𝒂𝒏𝒚 𝒄𝒉𝒂𝒏𝒈𝒆𝒔 𝒃𝒚 𝒕𝒉𝒆 𝒐𝒘𝒏𝒆𝒓."
-    formatted_list += f"\n\n{additional_message}"
-    reply_text = f"<b>Top {len(truncated_messages)} Tʀᴀɴᴅɪɴɢ ᴏғ ᴛʜᴇ ᴅᴀʏ 👇:</b>\n\n{formatted_list}"
-    await message.reply_text(reply_text)
 
 @Client.on_message(filters.private & filters.command("pm_search") & filters.user(ADMINS))
 async def set_pm_search(client, message):
