@@ -1159,7 +1159,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         settings = await get_settings(query.message.chat.id)
         if CUSTOM_FILE_CAPTION:
             try:
-                f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title,
+                f_caption = CUSTOM_FILE_fCAPTION.format(file_name='' if title is None else title,
                                                        file_size='' if size is None else size,
                                                        file_caption='' if f_caption is None else f_caption)
             except Exception as e:
@@ -1705,27 +1705,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
         await query.answer(MSG_ALRT)
- 
-    elif query.data == "main":
-        buttons = [[
-            InlineKeyboardButton('• ʙᴏᴛ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ •', callback_data='admic')
-        ], [
-            InlineKeyboardButton('• ɢʀᴏᴜᴘ •', callback_data='users'),
-            InlineKeyboardButton('• ᴍᴏʀᴇ •', callback_data='help')
-        ],[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id,
-            query.message.id,
-            InputMediaPhoto(random.choice(PICS))
-        )
-        await query.message.edit_text(
-            text=script.MAIN_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
+
 
     elif query.data == "purchase":
         buttons = [[
@@ -2029,15 +2009,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "group_info":
         buttons = [[
-            InlineKeyboardButton('× ᴀʟʟ ᴏᴜʀ ʟɪɴᴋꜱ ×', url="https://t.me/nova_flix")
+            InlineKeyboardButton('× ᴀʟʟ ᴏᴜʀ ʟɪɴᴋꜱ ×', url="https://t.me/SS_Movies_Series")
        ],[
-            InlineKeyboardButton('• ɢʀᴏᴜᴘ •', url="t.me/movie7xchat"),
-            InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', url="t.me/codeflix_bots")
-       ],[
-            InlineKeyboardButton('• sᴇʀɪᴇsғʟɪx •', url="https://t.me/webseries_flix"),
-            InlineKeyboardButton('• ᴍᴏᴠɪᴇғʟɪx •', url="https://t.me/movieflixspot")
-       ],[
-            InlineKeyboardButton('• ᴀɴɪᴍᴇ ᴄʀᴜɪsᴇ •', url="https://t.me/Anime_Cruise_Netflix")
+            InlineKeyboardButton('• ɢʀᴏᴜᴘ •', url="t.me/SSbotz_Support"),
+            InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', url="t.me/+0dMvhpBQnqpkNTU1")
        ],[ 
             InlineKeyboardButton('• ʙᴀᴄᴋ •', callback_data='start')
         ]]
@@ -2069,68 +2044,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
 
-
-    elif query.data == "admic":
-        if query.from_user.id not in ADMINS:
-            return await query.answer("⚠️ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀ ʙᴏᴛ ᴀᴅᴍɪɴ !", show_alert=True)
-        page = 0  
-        buttons = [
-            [InlineKeyboardButton('ɴᴇxᴛ ➡️', callback_data=f'admic_next_{page}')],
-            [InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='help')]
-        ]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=commands[page],  
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-
-    elif query.data.startswith("admic_next_"):
-        page = int(query.data.split('_')[-1]) + 1
-        if page >= len(commands):
-            page = len(commands) - 1
-
-        buttons = []
-        if page > 0:
-            buttons.append(InlineKeyboardButton('ᴘʀᴇᴠ ⬅️', callback_data=f'admic_prev_{page}'))
-
-        if page < len(commands) - 1:
-            buttons.append(InlineKeyboardButton('ɴᴇxᴛ ➡️', callback_data=f'admic_next_{page}'))
-
-        reply_markup = InlineKeyboardMarkup([buttons, [InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='help')]])
-        await query.message.edit_text(
-            text=commands[page],
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-
-    elif query.data.startswith("admic_prev_"):
-        page = int(query.data.split('_')[-1]) - 1
-        if page < 0:
-            page = 0  
-
-        buttons = []
-        if page > 0:
-            buttons.append(InlineKeyboardButton('ᴘʀᴇᴠ ⬅️', callback_data=f'admic_prev_{page}'))
-
-        if page < len(commands) - 1:
-            buttons.append(InlineKeyboardButton('ɴᴇxᴛ ➡️', callback_data=f'admic_next_{page}'))
-
-        reply_markup = InlineKeyboardMarkup([buttons, [InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='help')]])
-        await query.message.edit_text(
-            text=commands[page],
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-
-
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ', callback_data='group_info'),
-            InlineKeyboardButton('ᴄᴏᴍᴍᴀɴᴅs •', callback_data='main')
+            InlineKeyboardButton('ɴᴇᴛᴡᴏʀᴋ •', url="t.me/SS_botz")
+            
         ], [
             InlineKeyboardButton('• ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='t.me/SSadminRobot'),
-            InlineKeyboardButton('ɴᴇᴛᴡᴏʀᴋ •', url="t.me/SS_botz")
+            InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ', callback_data='group_info')
         ], [
             InlineKeyboardButton('• ʙᴀᴄᴋ •', callback_data='start')
         ]]
