@@ -57,8 +57,8 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('• 𝖬𝖠𝖨𝖭 •', url="https://t.me/SS_Movies_Series"),
-                    InlineKeyboardButton('• 𝖦𝖱𝖮𝖴𝖯 •', url="https://t.me/+8u-Xz04Jr6Q1OTJl")
+                    InlineKeyboardButton('• ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ •', url="https://t.me/SS_Movies_Series"),
+                    InlineKeyboardButton('• ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ •', url="https://t.me/+8u-Xz04Jr6Q1OTJl")
                 ],[
                     InlineKeyboardButton('• ᴘʀᴇᴍɪᴜᴍ •', callback_data='premium_info'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
@@ -117,8 +117,8 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('• 𝖬𝖠𝖨𝖭 •', url="https://t.me/SS_Movies_Series"),
-                    InlineKeyboardButton('• 𝖦𝖱𝖮𝖴𝖯 •', url="https://t.me/+8u-Xz04Jr6Q1OTJl")
+                    InlineKeyboardButton('• ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ •', url="https://t.me/SS_Movies_Series"),
+                    InlineKeyboardButton('• ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ •', url="https://t.me/+8u-Xz04Jr6Q1OTJl")
                 ],[
                     InlineKeyboardButton('• ᴘʀᴇᴍɪᴜᴍ •', callback_data='premium_info'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
@@ -134,7 +134,7 @@ async def start(client, message):
             gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
         else:
             gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 👋"
-        m=await message.reply_text("ʜᴇʟʟᴏ ʙᴀʙʏ, ʜᴏᴡ ᴀʀᴇ ʏᴏᴜ \nᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙᴀʙʏ . . .")
+        m=await message.reply_text("ʜᴇʟʟᴏ ʙᴀʙʏ, ʜᴏᴡ ᴘʀᴏғᴇssᴏʀ ᴘʀᴀᴅᴏx ʏᴏᴜ \nᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙᴀʙʏ . . .")
         await asyncio.sleep(0.4)
         await m.edit_text("🎊")
         await asyncio.sleep(0.5)
