@@ -145,7 +145,7 @@ async def refercall(bot, query):
     await bot.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://graph.org/file/1a2e64aee3d4d10edd930.jpg")
+            InputMediaPhoto("https://graph.org/file/1a2e64aee3d4d10edd930.jpg") # refer
         )
     await query.message.edit_text(
         text=f'Hay Your refer link:\n\nhttps://t.me/{bot.me.username}?start=reff_{query.from_user.id}\n\nShare this link with your friends, Each time they join,  you will get 10 refferal points and after 100 points you will get 1 month premium subscription.',
@@ -1717,7 +1717,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://postimg.cc/4nJwQxqR")
         )
         await query.message.edit_text(
             text=script.PURCHASE_TXT.format(query.from_user.mention),
@@ -1744,8 +1744,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
             query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto('https://graph.org/file/7519d226226bec1090db7.jpg')
+            query.message.id,  
+            InputMediaPhoto('https://graph.org/file/7519d226226bec1090db7.jpg') # donate
         )
         await query.message.edit_text(
             text=script.DONATION.format(query.from_user.mention, QR_CODE, OWNER_UPI_ID),
@@ -1764,7 +1764,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/2bbf1af08cdf42d7a5a77fae024f0acd")
+            InputMediaPhoto("https://postimg.cc/8FmPR4fG")
         )
         await query.message.edit_text(
             text=script.UPI_TXT.format(query.from_user.mention, OWNER_UPI_ID),
@@ -1782,7 +1782,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/2bbf1af08cdf42d7a5a77fae024f0acd")
+            InputMediaPhoto("https://postimg.cc/8FmPR4fG")
         )
         await query.message.edit_text(
             text=script.QR_TXT.format(query.from_user.mention, QR_CODE),
@@ -1853,7 +1853,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://postimg.cc/4nJwQxqR")
         )
         await query.message.edit_text(
             text=script.PLAN_TXT.format(query.from_user.mention),
@@ -1892,7 +1892,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://postimg.cc/4nJwQxqR")
         )
         await query.message.edit_text(
             text=script.BRONZE_TXT.format(query.from_user.mention),
@@ -1914,7 +1914,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://postimg.cc/4nJwQxqR")
         )
         await query.message.edit_text(
             text=script.SILVER_TXT.format(query.from_user.mention),
@@ -1936,7 +1936,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://postimg.cc/4nJwQxqR")
         )
         await query.message.edit_text(
             text=script.GOLD_TXT.format(query.from_user.mention),
@@ -1958,7 +1958,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://postimg.cc/4nJwQxqR")
         )
         await query.message.edit_text(
             text=script.PLATINUM_TXT.format(query.from_user.mention),
@@ -1980,7 +1980,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://postimg.cc/4nJwQxqR")
         )
         await query.message.edit_text(
             text=script.DIAMOND_TXT.format(query.from_user.mention),
@@ -2002,7 +2002,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://postimg.cc/4nJwQxqR")
         )
         await query.message.edit_text(
             text=script.OTHER_TXT.format(query.from_user.mention),
