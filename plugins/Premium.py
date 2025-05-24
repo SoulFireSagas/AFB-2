@@ -160,5 +160,5 @@ async def plan(client, message):
         ],[            
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
     ]]
-    await message.reply_photo(photo="https://vault.pictures/p/91ff77cfeec3450081f28486f2085224", caption=script.PREMIUM_TEXT.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(btn))
+    await message.reply_photo(photo="https://postimg.cc/4nJwQxqR", caption=script.PREMIUM_TEXT.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(btn))
     
