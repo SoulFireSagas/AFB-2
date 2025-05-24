@@ -1717,7 +1717,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224)
+            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
         )
         await query.message.edit_text(
             text=script.PURCHASE_TXT.format(query.from_user.mention),
@@ -1853,7 +1853,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224"")
         )
         await query.message.edit_text(
             text=script.PLAN_TXT.format(query.from_user.mention),
@@ -1892,7 +1892,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224"")
         )
         await query.message.edit_text(
             text=script.BRONZE_TXT.format(query.from_user.mention),
@@ -1914,7 +1914,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224"")
         )
         await query.message.edit_text(
             text=script.SILVER_TXT.format(query.from_user.mention),
@@ -1936,7 +1936,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224"")
         )
         await query.message.edit_text(
             text=script.GOLD_TXT.format(query.from_user.mention),
@@ -1958,7 +1958,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224"")
         )
         await query.message.edit_text(
             text=script.PLATINUM_TXT.format(query.from_user.mention),
@@ -1980,7 +1980,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224"")
         )
         await query.message.edit_text(
             text=script.DIAMOND_TXT.format(query.from_user.mention),
@@ -2002,7 +2002,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224")
+            InputMediaPhoto("https://vault.pictures/p/91ff77cfeec3450081f28486f2085224"")
         )
         await query.message.edit_text(
             text=script.OTHER_TXT.format(query.from_user.mention),
