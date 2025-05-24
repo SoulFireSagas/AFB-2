@@ -36,6 +36,18 @@ SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://envs.sh/Wdj.jpg'))
 FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')).split()  # Fsub pic
 
 # ============================
+# Pics
+# ============================
+'''
+START_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
+FORCE_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
+FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
+FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
+FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
+FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
+FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')'''
+
+# ============================
 # Admin, Channels & Users Configuration
 # ============================
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '2010016480').split()] # Replace with the actual admin ID(s) to add
