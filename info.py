@@ -41,9 +41,9 @@ FSUB_PICS = (environ.get('FSUB_PICS', 'https://postimg.cc/nj5zrzQ9')).split()  #
 '''
 START_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
 FORCE_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
-REF_PICS = (environ.get('REF_PICS', 'https://graph.org/file/1a2e64aee3d4d10edd930.jpg') # refere pic
+REF_PICS = (environ.get('REF_PICS', 'https://postimg.cc/8FmPR4fG') # refere pic
 PAY_PICS = (environ.get('PAY_PICS', 'https://vault.pictures/p/2bbf1af08cdf42d7a5a77fae024f0acd') #upi id , qr code.
-PRE_PICS = (environ.get('PRE_PICS', 'https://vault.pictures/p/91ff77cfeec3450081f28486f2085224') #premium features
+PRE_PICS = (environ.get('PRE_PICS', 'https://postimg.cc/4nJwQxqR') #premium features
 VPICS = (environ.get('VPICS', 'https://graph.org/file/6928de1539e2e80e47fb8.jpg') # verified 
 FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')'''
 
@@ -97,16 +97,17 @@ CAPTION_LANGUAGES = ["Bhojpuri", "Hindi", "Bengali", "Tamil", "English", "Bangla
 VERIFY = bool(environ.get('VERIFY', False))  # Verification On (True) / Off (False)
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 24))  # Add time in hours
 VERIFIED_LOG = int(environ.get('VERIFIED_LOG', '-1002622398357'))  # Log channel id (make sure bot is admin)
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/How_to_Download_7x/30')  # How to open tutorial link for verification
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/c/2468713541/12')  # How to open tutorial link for verification
 
 # ============================
 # Link Shortener Configuration
 # ============================
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'inshorturl.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/How_to_Download_7x/30')  # Tutorial video link for opening shortlink website
-IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
+SHORTLINK_API = environ.get('SHORTLINK_API', '7391d6375752f12db18a982355eb20e0ad795738')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/c/2468713541/12')  # Tutorial video link for opening shortlink website
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
+
 
 # ============================
 # Channel & Group Links Configuration
