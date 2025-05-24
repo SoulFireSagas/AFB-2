@@ -224,7 +224,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b>📂File : <a href="https://t.me/SS_Movies_Series">{file_name}</a></b>\n\n\<b>Size : {size}</b>\n\n<b>🔰Join Main Channel : @SS_Movies_Series</b>\n\n<b><blockquote>ᴘʟᴇᴀsᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜɪs ꜰɪʟᴇs ᴛᴏ ᴛʜᴇ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇ ᴀɴᴅ ᴄʟᴏsᴇ ᴛʜɪs ᴍᴇssᴀɢᴇ</blockquote></b>"""
+    CAPTION = """<b>📂File</b> : <b><a href="https://t.me/SS_Movies_Series">{file_name}</a></b>\n\n\<b>Size</b> : <b>{file_size}</b>\n\n<b>🔰Join Main Channel</b> : <b>@SS_Movies_Series</b>\n\n<b><blockquote>ᴘʟᴇᴀsᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜɪs ꜰɪʟᴇs ᴛᴏ ᴛʜᴇ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇ ᴀɴᴅ ᴄʟᴏsᴇ ᴛʜɪs ᴍᴇssᴀɢᴇ</blockquote></b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>‣ ᴛɪᴛʟᴇ : <a href={url}>{title}</a>
