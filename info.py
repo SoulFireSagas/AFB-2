@@ -41,10 +41,10 @@ FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')).split()  # Fsu
 '''
 START_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
 FORCE_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
-FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
-FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
-FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
-FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
+REF_PICS = (environ.get('REF_PICS', 'https://graph.org/file/1a2e64aee3d4d10edd930.jpg') # refere pic
+PAY_PICS = (environ.get('PAY_PICS', 'https://vault.pictures/p/2bbf1af08cdf42d7a5a77fae024f0acd') #upi id , qr code.
+PRE_PICS = (environ.get('PRE_PICS', 'https://vault.pictures/p/91ff77cfeec3450081f28486f2085224') #premium features
+FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg') 
 FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')'''
 
 # ============================
