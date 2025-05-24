@@ -28,12 +28,12 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "7600571087:AAEY2OiwX8UxPo77e4Gfe-Kha-QsxuE
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://envs.sh/WdA.jpg https://envs.sh/Wdj.jpg')).split()  # Sample pic
+PICS = (environ.get('PICS', 'https://vault.pictures/p/3b0d83a0957648bbae56a9e3e7220f48')).split()  # Sample pic
 NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/Wdj.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://envs.sh/Wdj.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://envs.sh/Wdj.jpg")
-SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://envs.sh/Wdj.jpg'))
-FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')).split()  # Fsub pic
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/1a2e64aee3d4d10edd930.jpg'))
+FSUB_PICS = (environ.get('FSUB_PICS', 'https://vault.pictures/p/3b0d83a0957648bbae56a9e3e7220f48')).split()  # Fsub pic
 
 # ============================
 # Pics
@@ -44,7 +44,7 @@ FORCE_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')
 REF_PICS = (environ.get('REF_PICS', 'https://graph.org/file/1a2e64aee3d4d10edd930.jpg') # refere pic
 PAY_PICS = (environ.get('PAY_PICS', 'https://vault.pictures/p/2bbf1af08cdf42d7a5a77fae024f0acd') #upi id , qr code.
 PRE_PICS = (environ.get('PRE_PICS', 'https://vault.pictures/p/91ff77cfeec3450081f28486f2085224') #premium features
-FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg') 
+VPICS = (environ.get('VPICS', 'https://graph.org/file/6928de1539e2e80e47fb8.jpg') # verified 
 FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')'''
 
 # ============================
