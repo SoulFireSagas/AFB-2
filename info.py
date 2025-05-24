@@ -28,12 +28,12 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "7600571087:AAEY2OiwX8UxPo77e4Gfe-Kha-QsxuE
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://vault.pictures/p/3b0d83a0957648bbae56a9e3e7220f48')).split()  # Sample pic
+PICS = (environ.get('PICS', 'https://postimg.cc/nj5zrzQ9')).split()  # Sample pic
 NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/Wdj.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://envs.sh/Wdj.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://envs.sh/Wdj.jpg")
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/1a2e64aee3d4d10edd930.jpg'))
-FSUB_PICS = (environ.get('FSUB_PICS', 'https://vault.pictures/p/3b0d83a0957648bbae56a9e3e7220f48')).split()  # Fsub pic
+FSUB_PICS = (environ.get('FSUB_PICS', 'https://postimg.cc/nj5zrzQ9')).split()  # Fsub pic
 
 # ============================
 # Pics
